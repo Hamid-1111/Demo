@@ -10,6 +10,10 @@ async function connectMongoDb() {
     .catch((err) => console.log("no connection"));
 }
 
+app.get('/try', (req, res) => {
+    res.send("GET Request Called")
+})
+
 module.exports = {
   connectMongoDb,
 };
